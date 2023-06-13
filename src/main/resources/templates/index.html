@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1"/>
+    <link href="css/index-styles.css" rel="stylesheet"/>
+    <title>Spring Boot Application</title>
+</head>
+<body>
+
+<h1>Samochody</h1>
+
+<a href="/create-car" style="margin-top: 15px">
+    <button>Stworz nowy samochod</button>
+</a>
+
+<div id="container">
+    <table>
+        <tr>
+            <th>Marka</th>
+            <th>Model</th>
+        </tr>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.brand}"></td>
+            <td th:text="${car.model}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1"/>
+    <title>Spring Boot Application</title>
+</head>
+<body>
+<h1>Tworzenie nowego samochodu</h1>
+
+<!--        <form action="#" th:action="@{/processForm}" th:object="${foo}" method="post">-->
+<!--            <input type="text" th:field="*{bar}" />-->
+<!--            <input type="submit" />-->
+<!--        </form>-->
+
+<form action="#" th:action="@{/create-car}" th:object="${car}" method="post">
+    <label>Marka</label>
+    <input type="text" th:field="*{brand}"/>
+    <label>Model</label>
+    <input type="text" th:field="*{model}"/>
+    <input type="submit" value="Stworz"/>
+</form>
+</body>
+</html>
